@@ -21,8 +21,9 @@ public class DemoApplication {
 	String sayHello() {
 		logger.debug("Hello");
 		
+		String value1 = System.getenv("TEST_CONFIG1");
 		String value2 = System.getenv("TEMP_STRING");
 		
-		return "Hello Azure : {" + value2 + "}!";
+		return "Hello Azure : {" + value1 + "," + value2 + "}!";
 	}
 }
