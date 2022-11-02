@@ -20,6 +20,9 @@ public class DemoApplication {
 	@RequestMapping("/")
 	String sayHello() {
 		logger.debug("Hello");
-		return "Hello Azure X!";
+		
+		String value2 = System.getenv("TEMP_STRING");
+		
+		return "Hello Azure : {" + value2 + "}!";
 	}
 }
