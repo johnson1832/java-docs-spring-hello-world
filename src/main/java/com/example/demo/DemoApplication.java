@@ -35,12 +35,11 @@ public class DemoApplication {
 		logger.debug("************************************* Return");
 				
 		List<Thing> listOfThings = new ArrayList<>();
-		listOfThings.add(new Thing("TEMP_STRING", System.getenv("TEMP_STRING"), "AS & CM", ""));
-		listOfThings.add(new Thing("TEMP_STRING2", System.getenv("TEMP_STRING2"), "AS", ""));
-		listOfThings.add(new Thing("TEST_CONFIG1", System.getenv("TEST_CONFIG1"), "CM", ""));
-		listOfThings.add(new Thing("TEMP_STRING", System.getenv("TEMP_STRING"), "AS & CM", ""));
-		listOfThings.add(new Thing("TEMP_STRING", configurationClient.getConfigurationSetting("TEMP_STRING", "").getValue(), "CM", "local = xxx, azure = xxx"));
-		listOfThings.add(new Thing("TEST_CONFIG1", configurationClient.getConfigurationSetting("TEST_CONFIG1", "").getValue(), "CM", "local = nnn, azure = nnn"));
+		listOfThings.add(new Thing("TEMP_STRING", System.getenv("TEMP_STRING"), "AS & CM", "howdy"));
+		listOfThings.add(new Thing("TEMP_STRING2", System.getenv("TEMP_STRING2"), "AS", "hello"));
+		listOfThings.add(new Thing("TEST_CONFIG1", System.getenv("TEST_CONFIG1"), "CM", "null"));
+		listOfThings.add(new Thing("TEMP_STRING", configurationClient.getConfigurationSetting("TEMP_STRING", "").getValue(), "CM", "howdy-doo"));
+		listOfThings.add(new Thing("TEST_CONFIG1", configurationClient.getConfigurationSetting("TEST_CONFIG1", "").getValue(), "CM", "5"));
 		
 		
 		return listOfThings;
